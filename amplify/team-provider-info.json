@@ -1,0 +1,20 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-yoyopizza-dev-144415-authRole",
+            "UnauthRoleArn": "arn:aws:iam::736990391265:role/amplify-yoyopizza-dev-144415-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::736990391265:role/amplify-yoyopizza-dev-144415-authRole",
+            "Region": "ap-southeast-1",
+            "DeploymentBucketName": "amplify-yoyopizza-dev-144415-deployment",
+            "UnauthRoleName": "amplify-yoyopizza-dev-144415-unauthRole",
+            "StackName": "amplify-yoyopizza-dev-144415",
+            "StackId": "arn:aws:cloudformation:ap-southeast-1:736990391265:stack/amplify-yoyopizza-dev-144415/8dcb0f80-cb32-11ea-9796-062b7ab1ef08",
+            "AmplifyAppId": "d3oce8cvpgxl4g"
+        },
+        "categories": {
+            "auth": {
+                "yoyopizzaf8144fc9": {}
+            }
+        }
+    }
+}

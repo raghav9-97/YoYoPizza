@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
+import Amplify from 'aws-amplify';
+import {ChatBot, AmplifyTheme} from 'aws-amplify-react';
+import awsconfig from './aws-exports';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+Amplify.configure(awsconfig);
+
+const myTheme = {
+  ...AmplifyTheme,
+  sectionHeader: {
+    ...AmplifyTheme.sectionHeader,
+    backgroundColor: '#ff6600'
+  }
+};
+
+Amplify.configure({
+  Interactions: {
+    bots: {
+      "YoYoPizza": {
+        "name": "YoYoPizza",
+        "alias": "$LATEST",
+        "region": "ap-southeast-1",
+      },
+    }
+  }
+});
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+      <ChatBot
+        title="YoYoPizza"
+        theme={myTheme}
+        botName="YoYoPizza"
+        welcomeMessage="Hi There! Welcome to YoYo Pizza Chatbot. Order a Pizza / Know Order Status"
+      />
+      </div>
+    );
+  }
 }
 
 export default App;

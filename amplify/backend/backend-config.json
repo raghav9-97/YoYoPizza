@@ -1,0 +1,10 @@
+{
+	"auth": {
+		"yoyopizzaf8144fc9": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
+	}
+}
